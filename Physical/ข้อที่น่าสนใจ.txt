@@ -1,0 +1,22 @@
+02-04  String Format I
+02-05  String Format II
+02-06  use String format %.3s
+02-07
+02-08 เรื่อง  %[^\n] 
+03-01  String Format III
+03-04  เรื่องรับค่าintเเล้วมีตัวอักษรพิเศษมาคั่น
+04-05 use ascii 65-90 is upper
+	        97-122 is lower
+		use +32 or -32 to swapcase
+		or use function toupper() or to lower()
+	
+05-06 Easy Pyramid
+
+
+----
+สรุปเรื่องรับค่าเเล้วมีตัวพิเศษเช่น / , ถ้าเป็น int มันจะไม่สนใจ ถ้า string สน
+
+strcasecmp(sen1, sen2) == 0
+ใช้non case sensitive
+strcmp(sen1, sen2) == 0
+ใช้case sensitive ตัวเล็กใหญ่คนละตัว 

@@ -1,0 +1,59 @@
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+    char sen[200];
+
+    scanf("%[^\n]", sen);
+
+
+    char notabc[26] = {'A', 'B', 'X', 'Y', 'P', 'Q', 'R', 'M', 'N', 'C', 'E', 'D', 'K', 'L', 'J', 'O', 'S', 'H', 'T', 'U', 'F', 'V', 'Z', 'G', 'W', 'I'};
+    char notabc1[26] = {'a', 'b', 'x', 'y', 'p', 'q', 'r', 'm', 'n', 'c', 'e', 'd', 'k', 'l', 'j', 'o', 's', 'h', 't', 'u', 'f', 'v', 'z', 'g', 'w', 'i'};
+
+    // printf("%d \n", strlen(sen));
+
+
+    int i = 0;
+    int j = 0;
+
+    // sen[j] = notabc[20+6];
+    
+    // printf("%c", sen[0]);
+    // printf("%c", sen[1]);
+
+    
+
+    while(j < strlen(sen)){
+        // printf("%c : ", sen[j]);
+        while(i<=25){
+            //  printf("%c \n", notabc[i]);
+            if((sen[j] == 'V' || sen[j] == 'Z' || sen[j] == 'G' || sen[j] == 'W'|| sen[j] == 'I')&&(sen[j] == notabc[i])){
+                sen[j] = notabc[i-26+5];
+                break;
+            }
+            else if (sen[j] == notabc[i]){
+                sen[j] = notabc[i+5];
+                break;
+            }
+            if((sen[j] == 'v' || sen[j] == 'z' || sen[j] == 'g' || sen[j] == 'w'|| sen[j] == 'i')&&(sen[j] == notabc1[i])){
+                sen[j] = notabc1[i-26+5];
+                break;
+            }
+            else if (sen[j] == notabc1[i]){
+                sen[j] = notabc1[i+5];
+                break;
+            }
+
+            i++;
+        }
+        j++;
+        i = 0;
+    }
+    int  k = 0;
+    while(k < strlen(sen)){
+        printf("%c", sen[k]);
+        k++;
+    }
+    return 0;
+}
